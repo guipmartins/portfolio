@@ -820,3 +820,70 @@ textarea.campo-form {
     animation-duration: .01ms !important;
   }
 }
+
+/* ==========================================
+   PROJETOS — CARROSSEL MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .projetos {
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .projetos-caixa {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 12px 7% 28px;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 7%;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+
+  .projetos-caixa::-webkit-scrollbar {
+    display: none;
+  }
+
+  .projetos-card {
+    flex: 0 0 85%;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  .projetos-card:hover {
+    transform: none;
+  }
+
+  .projetos-titulo {
+    padding: 0 7%;
+  }
+}
+
+
+/* ==========================================
+   PROJETOS — INTERAÇÃO DOS CARDS
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .projetos-card {
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .projetos-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff6a00;
+    box-shadow: 0 12px 35px rgba(255, 106, 0, 0.10);
+  }
+}
