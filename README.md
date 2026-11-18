@@ -1,85 +1,59 @@
-# 👨‍💻 Portfólio | Guilherme Martins
+# Portfólio — Guilherme Martins
 
-Bem-vindo ao repositório do meu portfólio profissional!
+Este repositório contém o código-fonte do meu portfólio profissional, desenvolvido para reunir informações sobre minha experiência, formação acadêmica, competências técnicas e projetos.
 
-Este projeto foi desenvolvido para apresentar minha trajetória como desenvolvedor de software, minhas competências técnicas, experiências profissionais e projetos realizados.
+O projeto foi construído com HTML, CSS e JavaScript, sem utilização de frameworks, priorizando uma estrutura simples, responsiva e de fácil manutenção.
 
-O site foi construído utilizando **HTML5, CSS3 e JavaScript**, com hospedagem no **Firebase Hosting** e versionamento por meio de **Git e GitHub**.
+**Site:** [guilherme-martins.web.app](https://guilherme-martins.web.app/)
 
-### 🌐 Acesse o portfólio
+## Sobre o projeto
 
-**[Visualizar portfólio online](https://guilherme-martins.web.app/)**
+A proposta do portfólio é apresentar meu trabalho como desenvolvedor de software em um ambiente próprio, reunindo minha trajetória profissional e alguns dos projetos que desenvolvi.
 
-## 🚀 Tecnologias utilizadas
+Além de servir como apresentação profissional, o site também é um projeto em evolução, no qual pretendo aplicar melhorias de interface, acessibilidade, desempenho e organização do código.
 
-| Tecnologia | Aplicação |
+Atualmente, o portfólio conta com:
+
+- Apresentação pessoal e profissional;
+- Informações sobre experiência e formação acadêmica;
+- Tecnologias e competências técnicas;
+- Projetos desenvolvidos;
+- Links para GitHub e LinkedIn;
+- Formulário de contato com redirecionamento para o WhatsApp;
+- Layout adaptável a diferentes tamanhos de tela.
+
+## Tecnologias
+
+O projeto utiliza as seguintes tecnologias e ferramentas:
+
+| Tecnologia | Utilização |
 |---|---|
-| HTML5 | Estrutura e organização das páginas |
-| CSS3 | Estilização e responsividade |
-| JavaScript | Interatividade e formulário de contato |
+| HTML5 | Estrutura e conteúdo do site |
+| CSS3 | Estilização, organização visual e responsividade |
+| JavaScript | Interações e funcionamento do formulário de contato |
 | Git | Controle de versão |
-| GitHub | Hospedagem do código-fonte |
-| Firebase Hosting | Publicação e hospedagem do site |
-| Visual Studio Code | Ambiente de desenvolvimento |
+| GitHub | Repositório e histórico de desenvolvimento |
+| Firebase Hosting | Hospedagem e publicação do site |
 
-## 📂 Estrutura do projeto
+O desenvolvimento é realizado no Visual Studio Code.
+
+## Estrutura do repositório
 
 ```text
-Portifolio/
-├── img/
-│   ├── guilherme.jpg
-│   ├── jornadapro.png
-│   └── rhconnect.png
-├── index.html
-├── styles.css
-├── 404.html
-├── firebase.json
-├── .firebaserc
-├── .gitignore
+portfolio/
+├── img/                 # Imagens utilizadas no site
+├── index.html           # Página principal
+├── styles.css           # Estilos e responsividade
+├── 404.html             # Página de erro
+├── firebase.json        # Configuração do Firebase Hosting
+├── .firebaserc          # Referência ao projeto Firebase
+├── .gitignore           # Arquivos ignorados pelo Git
 └── README.md
 ```
 
-## ✨ Funcionalidades
+## Executando o projeto
 
-- Apresentação pessoal e profissional.
-- Exibição de competências técnicas.
-- Histórico de experiências profissionais.
-- Apresentação de projetos desenvolvidos.
-- Layout responsivo para diferentes dispositivos.
-- Formulário de contato integrado ao WhatsApp.
-- Links para perfis profissionais.
-
-## 🛠️ Como o projeto foi desenvolvido
-
-**1. Desenvolvimento da interface**
-
-A estrutura do site foi criada com HTML5, utilizando CSS3 para personalização visual e adaptação a diferentes tamanhos de tela.
-
-O JavaScript foi utilizado para adicionar interatividade, incluindo o formulário de contato que direciona mensagens ao WhatsApp.
-
-**2. Configuração do Firebase Hosting**
-
-Foi criado um projeto no Firebase, utilizando o plano gratuito Spark.
-
-O Firebase CLI foi configurado para realizar a publicação do site diretamente pelo terminal.
-
-**3. Configuração de um domínio de hospedagem**
-
-O site foi publicado no endereço:
-
-https://guilherme-martins.web.app/
-
-**4. Versionamento com Git**
-
-O repositório local foi inicializado com Git, utilizando a branch `main` como principal.
-
-Foi configurado um arquivo `.gitignore` para excluir arquivos temporários, caches e arquivos de ambiente do controle de versão.
-
-**5. Integração com GitHub**
-
-A ferramenta GitHub CLI (`gh`) foi utilizada para autenticação, criação do repositório remoto e envio do código-fonte.
-
-## 💻 Executando localmente
+Por se tratar de um site estático, não é necessário instalar dependências ou configurar um ambiente de execução específico.
 
 Clone o repositório:
 
@@ -87,44 +61,47 @@ Clone o repositório:
 git clone https://github.com/guipmartins/portfolio.git
 ```
 
-Acesse a pasta:
+Entre no diretório:
 
 ```bash
 cd portfolio
 ```
 
-Abra o arquivo `index.html` no navegador ou utilize a extensão Live Server do Visual Studio Code.
+Abra o arquivo `index.html` no navegador. Também é possível utilizar um servidor local, como a extensão Live Server do Visual Studio Code.
 
-Não é necessário instalar dependências para visualizar o site estático.
+## Hospedagem e publicação
 
-## 🔥 Publicação no Firebase
+O site está hospedado no Firebase Hosting, utilizando o plano gratuito Spark.
 
-Para publicar atualizações, é necessário ter Node.js, acesso ao projeto Firebase e o Firebase CLI disponível.
+A configuração foi realizada por meio do Firebase CLI, com um site de hospedagem específico para o portfólio.
 
-Após autenticar no Firebase, execute:
+As atualizações podem ser publicadas pelo terminal, desde que o ambiente esteja autenticado e tenha acesso ao projeto Firebase:
 
 ```bash
 npx firebase-tools deploy --only hosting:portfolio
 ```
 
-O comando publica os arquivos definidos na configuração do Firebase Hosting.
+O código-fonte é mantido neste repositório, enquanto a versão publicada fica disponível em:
 
-## 📈 Melhorias planejadas
+[guilherme-martins.web.app](https://guilherme-martins.web.app/)
 
-- [ ] Reformulação visual com identidade Dark Premium.
-- [ ] Melhorias de acessibilidade.
-- [ ] Otimização de desempenho.
-- [ ] Aperfeiçoamento das animações e interações.
-- [ ] Evolução do formulário de contato.
+## Próximas melhorias
 
-## 👤 Autor
+O projeto continuará recebendo atualizações, principalmente nas seguintes áreas:
+
+- Reformulação da interface e da identidade visual;
+- Melhorias na experiência de navegação em dispositivos móveis;
+- Aprimoramento da acessibilidade;
+- Otimização de imagens e carregamento;
+- Revisão do formulário de contato;
+- Organização e manutenção do código.
+
+## Autor
 
 **Guilherme Martins**
 
-Desenvolvedor de software com experiência em Python, automação de processos, integrações de sistemas e desenvolvimento de soluções tecnológicas.
+Desenvolvedor de software com experiência em Python, automação de processos, integração de sistemas e desenvolvimento de soluções para ambientes corporativos.
 
-**[GitHub](https://github.com/guipmartins)** | **[LinkedIn](https://www.linkedin.com/in/jos%C3%A9-guilherme-moreira-pereira-martins/)** | **[Portfólio](https://guilherme-martins.web.app/)**
-
----
-
-Desenvolvido por Guilherme Martins.
+- [LinkedIn](https://www.linkedin.com/in/jos%C3%A9-guilherme-moreira-pereira-martins/)
+- [GitHub](https://github.com/guipmartins)
+- [Portfólio](https://guilherme-martins.web.app/)
