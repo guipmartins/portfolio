@@ -42,10 +42,48 @@
             <a href="https://github.com/guipmartins" class="hero-botao-secundario" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
           </div>
         </div>
+
+<!-- Editor de código animado -->
         <div class="hero-visual">
-          <div class="hero-foto-moldura"><img src="img/guilherme.jpg" alt="Retrato de Guilherme Martins" class="foto-perfil" width="440" height="440"></div>
-          <div class="hero-detalhe"><span>01 /</span> SOFTWARE ENGINEERING</div>
+
+            <div class="terminal-editor">
+
+                <div class="terminal-topo">
+                    <div class="terminal-controles">
+                        <span class="terminal-bolinha vermelha"></span>
+                        <span class="terminal-bolinha amarela"></span>
+                        <span class="terminal-bolinha verde"></span>
+                    </div>
+
+                    <span id="terminal-arquivo">developer.py</span>
+
+                    <span class="terminal-status">
+                        <i class="fa-solid fa-code"></i>
+                    </span>
+                </div>
+
+                <div class="terminal-aba">
+                    <i class="fa-brands fa-python"></i>
+                    <span id="terminal-linguagem">Python</span>
+                </div>
+
+                <div class="terminal-corpo">
+                    <pre><code id="codigo-digitando"></code><span class="terminal-cursor" aria-hidden="true"></span></pre>
+                </div>
+
+                <div class="terminal-rodape">
+                    <span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Ready
+                    </span>
+
+                    <span>UTF-8 · Auto typing</span>
+                </div>
+
+            </div>
+
         </div>
+
       </div>
       <div class="hero-rodape" aria-hidden="true"><span>PYTHON · SQL · AUTOMAÇÃO · BACKEND</span><span>EXPLORE <i class="fa-solid fa-arrow-down"></i></span></div>
     </section>
@@ -98,5 +136,6 @@
       else window.location.href = url;
     });
   </script>
+  <script src="./terminal.js" defer></script>
 </body>
 </html>
