@@ -1,0 +1,602 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisClaro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+    min-height: 100vh;
+}
+
+/* =========================================
+   FUNDO ILUMINADO
+========================================= */
+
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 10% 20%,
+            var(--primaria) 0%,
+            transparent 25%),
+        radial-gradient(circle at 90% 80%,
+            var(--secundaria) 0%,
+            transparent 25%);
+}
+
+/* Conteúdo acima do fundo */
+
+.cabecalho,
+.sobre,
+.projetos,
+.contatos {
+    position: relative;
+    z-index: 1;
+    scroll-margin-top: 100px;
+}
+
+/* =========================================
+   MENU DE NAVEGAÇÃO
+========================================= */
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1.5rem 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3.5rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: linear-gradient(to right,
+            var(--primaria),
+            var(--secundaria));
+
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 110px 2rem 2rem;
+    gap: 8px;
+}
+
+.foto-perfil {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 3px solid rgba(79, 70, 229, 0.4);
+
+    box-shadow:
+        0 0 30px rgba(79, 70, 229, 0.6),
+        0 0 60px rgba(79, 70, 229, 0.25);
+
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--primaria);
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.cabecalho-sub-titulo {
+    font-size: 1.5rem;
+    color: var(--claro);
+    font-weight: 500;
+}
+
+/* Animação da foto */
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* =========================================
+   SOBRE MIM
+========================================= */
+
+.sobre {
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sobre-caixa {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem 3rem;
+
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+
+    transition: all 0.3s ease;
+}
+
+.sobre-paragrafo {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(226, 232, 240, 0.9);
+    text-wrap: pretty;
+}
+
+.sobre-caixa:hover {
+    border-color: rgba(124, 58, 237, 0.4);
+
+    box-shadow:
+        0 0 20px rgba(79, 70, 229, 0.2);
+
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   PROJETOS
+========================================= */
+
+.projetos {
+    padding: 3rem 2rem 6rem;
+}
+
+.projetos-titulo {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Card dos projetos */
+
+.projetos-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.projetos-card:hover {
+    box-shadow:
+        0 0 20px rgba(79, 70, 229, 0.3);
+
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* Imagens dos projetos */
+
+.projetos-imagem {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Caixa de texto */
+
+.caixa-texto-projetos {
+    padding: 2rem;
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Títulos dos projetos */
+
+.info-projetos {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--claro);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Descrições dos projetos */
+
+.paragrafo-projetos {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(226, 232, 240, 0.85);
+    text-wrap: pretty;
+}
+
+/* =========================================
+   CONTATOS
+========================================= */
+
+.contatos {
+    padding: 6rem 2rem;
+}
+
+.contatos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.formulario-contato {
+    max-width: 600px;
+    margin: 0 auto;
+
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(5px);
+
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+}
+
+/* Campos do formulário */
+
+.campo-form {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    color: var(--claro);
+    border: 1px solid var(--vidro);
+
+    outline: none;
+    font-size: 1rem;
+
+    transition: all 0.3s ease;
+}
+
+.campo-form:focus {
+    border-color: var(--secundaria);
+
+    box-shadow:
+        0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.campo-form::placeholder {
+    color: rgba(226, 232, 240, 0.5);
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+textarea.campo-form {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* =========================================
+   BOTÃO WHATSAPP
+========================================= */
+
+.botao-form {
+    display: block;
+    width: 100%;
+
+    color: var(--claro);
+
+    background: linear-gradient(to right,
+            var(--primaria),
+            var(--secundaria));
+
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+
+    transition: all 0.5s ease;
+}
+
+.botao-form i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.botao-form:hover {
+    transform: translateY(-4px);
+
+    background: linear-gradient(to right,
+            var(--secundaria),
+            var(--primaria));
+
+    box-shadow:
+        0 0 15px rgba(79, 70, 229, 0.4);
+}
+
+/* =========================================
+   REDES SOCIAIS
+========================================= */
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.redes-sociais a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    color: var(--claro);
+    font-size: 2rem;
+    text-decoration: none;
+
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--vidro);
+    border-radius: 50%;
+
+    transition: all 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: var(--claro);
+    border-color: var(--secundaria);
+
+    background-color: rgba(124, 58, 237, 0.15);
+
+    transform: translateY(-6px) scale(1.1);
+
+    box-shadow:
+        0 0 20px rgba(124, 58, 237, 0.4);
+}
+
+.redes-sociais a:focus-visible {
+    outline: 2px solid var(--secundaria);
+    outline-offset: 4px;
+}
+
+/* =========================================
+   RESPONSIVIDADE - TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .projetos-caixa {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+    .projetos-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .menu {
+        gap: 1.5rem;
+    }
+
+    .menu-link {
+        font-size: 1rem;
+    }
+
+    .sobre-caixa {
+        padding: 2rem;
+    }
+}
+
+/* =========================================
+   RESPONSIVIDADE - CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Menu */
+
+    .navegacao {
+        padding: 1rem 0.5rem;
+    }
+
+    .menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .menu-link {
+        font-size: 0.85rem;
+    }
+
+    /* Cabeçalho */
+
+    .cabecalho {
+        padding-top: 120px;
+    }
+
+    .foto-perfil {
+        width: 230px;
+        height: 230px;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .cabecalho-sub-titulo {
+        font-size: 1.1rem;
+    }
+
+    /* Seções */
+
+    .sobre,
+    .projetos,
+    .contatos {
+        padding: 4rem 1rem;
+    }
+
+    .sobre-titulo,
+    .projetos-titulo,
+    .contatos-titulo {
+        font-size: 2rem;
+    }
+
+    /* Sobre mim */
+
+    .sobre-caixa {
+        padding: 1.5rem;
+    }
+
+    .sobre-paragrafo {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    /* Projetos */
+
+    .caixa-texto-projetos {
+        padding: 1.5rem;
+    }
+
+    .info-projetos {
+        font-size: 1.2rem;
+    }
+
+    .paragrafo-projetos {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    /* Contatos */
+
+    .formulario-contato {
+        padding: 1.5rem;
+    }
+
+    /* Redes sociais */
+
+    .redes-sociais a {
+        width: 55px;
+        height: 55px;
+        font-size: 1.7rem;
+    }
+}
+
+/* =========================================
+    ACESSIBILIDADE
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .foto-perfil {
+        animation: none;
+    }
+
+    .sobre-caixa,
+    .projetos-card,
+    .botao-form,
+    .redes-sociais a {
+        transition: none;
+    }
+
+    .sobre-caixa:hover,
+    .projetos-card:hover,
+    .botao-form:hover,
+    .redes-sociais a:hover {
+        transform: none;
+    }
+}

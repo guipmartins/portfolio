@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "portifolio-web-6169c"
+  },
+  "targets": {
+    "portifolio-web-6169c": {
+      "hosting": {
+        "portfolio": [
+          "guilherme-martins"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
