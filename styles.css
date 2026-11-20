@@ -1302,11 +1302,7 @@ textarea.campo-form {
 
 }
 
-/* ==========================================*
-
-*   PROJETOS — CARROSSEL MOBILE*
-
-*========================================== */
+/* ===== PROJETOS — CARROSSEL MOBILE ===== */
 
 @media (max-width: 600px) {
 
@@ -1374,11 +1370,7 @@ textarea.campo-form {
 
 }
 
-/* ==========================================*
-
-*   PROJETOS — INTERAÇÃO DOS CARDS*
-
-*========================================== */
+/* ===== PROJETOS — INTERAÇÃO DOS CARDS ===== */
 
 @media (hover: hover) and (pointer: fine) {
 
@@ -1408,11 +1400,7 @@ textarea.campo-form {
 
 }
 
-/* ==========================================*
-
-*   TERMINAL ANIMADO — DARK PREMIUM*
-
-*========================================== */
+/* ===== TERMINAL ANIMADO — DARK PREMIUM ===== */
 
 .terminal-editor {
 
@@ -1704,267 +1692,251 @@ textarea.campo-form {
 
 }
 
-/* ==========================================*
-
-*   SOBRE MIM — DARK PREMIUM*
-
-*========================================== */
-
+/* =========================================================
+   SEÇÃO 01 — SOBRE MIM E TRAJETÓRIA
+   Foto + narrativa, seguidas de cartões de experiência.
+   Edite cores no :root no começo deste arquivo.
+   ========================================================= */
 .sobre {
-
-  padding: 90px 6%;
-
+  padding: 80px 5% 105px;
 }
 
 .sobre-layout {
-
   display: grid;
-
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
   align-items: center;
-
-  gap: clamp(40px, 6vw, 100px);
-
+  gap: clamp(35px, 6vw, 95px);
   max-width: 1320px;
-
   margin: 0 auto;
-
 }
 
+/* Coluna esquerda: foto de perfil */
 .sobre-foto-container {
-
   width: 100%;
-
-  max-width: 440px;
-
+  max-width: 420px;
 }
 
 .sobre-foto-moldura {
-
   position: relative;
-
-  width: 100%;
-
   overflow: hidden;
-
-  background: #151515;
-
-  border: 1px solid #333;
-
+  border: 1px solid #343434;
   border-radius: 8px;
-
-}
-
-.sobre-foto-moldura::after {
-
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  border: 1px solid rgba(255, 106, 0, 0.15);
-
-  pointer-events: none;
-
+  background: #151515;
 }
 
 .sobre-foto {
-
   display: block;
-
   width: 100%;
-
-  height: auto;
-
   aspect-ratio: 4 / 5;
-
   object-fit: cover;
-
   object-position: center;
-
-  transition: transform 0.5s ease;
-
+  transition: transform .4s ease;
 }
 
 .sobre-foto-moldura:hover .sobre-foto {
-
-  transform: scale(1.04);
-
+  transform: scale(1.035);
 }
 
 .sobre-foto-legenda {
-
-  margin-top: 18px;
-
+  margin-top: 16px;
   color: #999;
-
-  font-size: 0.7rem;
-
-  font-weight: 600;
-
-  letter-spacing: 2px;
-
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .15em;
 }
 
-.sobre-foto-indice {
+.sobre-foto-indice { color: var(--primaria); }
 
-  color: #ff6a00;
-
-  margin-right: 8px;
-
-}
-
-.sobre-conteudo {
-
-  min-width: 0;
-
-  width: 100%;
-
-}
+/* Coluna direita: título e história pessoal */
+.sobre-conteudo { min-width: 0; }
 
 .sobre-conteudo .secao-cabecalho {
-
-  width: 100%;
-
-  max-width: none;
-
-  margin: 0 0 30px;
-
-  text-align: left;
-
+  margin-bottom: 25px;
 }
 
 .sobre-conteudo .sobre-titulo {
-
-  max-width: 680px;
-
-  margin: 20px 0 0;
-
-  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
-
-  line-height: 1.12;
-
-  letter-spacing: -0.05em;
-
+  max-width: 750px;
+  font-size: clamp(2.4rem, 4.5vw, 4.6rem);
+  line-height: 1.1;
+  letter-spacing: -.055em;
 }
 
 .sobre-conteudo .sobre-caixa {
-
   width: 100%;
-
-  max-width: none;
-
-  margin: 0;
-
-  padding: 30px;
-
+  padding: clamp(22px, 3vw, 34px);
   background: #141414;
-
-  border: 1px solid #303030;
-
+  border: 1px solid var(--borda);
   border-radius: 8px;
-
-  box-sizing: border-box;
-
 }
 
 .sobre-conteudo .sobre-paragrafo {
-
-  font-size: 0.98rem;
-
-  line-height: 1.9;
-
-  color: #bcbcbc;
-
+  color: #c5c5c5;
+  font-size: .97rem;
+  line-height: 1.85;
 }
 
-.sobre-conteudo .sobre-paragrafo+.sobre-paragrafo {
-
-  margin-top: 20px;
-
+.sobre-conteudo .sobre-paragrafo + .sobre-paragrafo {
+  margin-top: 18px;
 }
 
-/* Tablets */
+/* Linha do tempo de experiências — ordem cronológica reversa */
+.trajetoria {
+  max-width: 1320px;
+  margin: 100px auto 0;
+  padding-top: 65px;
+  border-top: 1px solid var(--borda);
+}
 
+.trajetoria-cabecalho { margin-bottom: 32px; }
+
+.trajetoria-cabecalho h3 {
+  margin-top: 12px;
+  font-size: clamp(2rem, 3.8vw, 3.6rem);
+  letter-spacing: -.05em;
+  line-height: 1.15;
+}
+
+.trajetoria-cabecalho h3 span { color: var(--primaria); }
+
+.trajetoria-cabecalho p {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+.trajetoria-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.experiencia-card {
+  min-width: 0;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid var(--borda);
+  border-radius: 7px;
+  background: #131313;
+  transition: border-color .25s ease, transform .25s ease;
+}
+
+.experiencia-card:hover {
+  border-color: #8e481c;
+  transform: translateY(-3px);
+}
+
+/* Accionar ocupa a largura toda: destaque da evolução Júnior → Sênior */
+.experiencia-destaque {
+  grid-column: 1 / -1;
+  border-left: 3px solid var(--primaria);
+}
+
+.experiencia-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.experiencia-tipo {
+  color: var(--primaria);
+  font-size: .67rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.experiencia-topo h4 {
+  margin: 8px 0 4px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.3;
+}
+
+.experiencia-topo p,
+.experiencia-card > p,
+.cargos-lista p {
+  color: #b4b4b4;
+  font-size: .91rem;
+  line-height: 1.75;
+}
+
+.experiencia-periodo {
+  flex-shrink: 0;
+  color: #aaa;
+  font-size: .77rem;
+  text-align: right;
+}
+
+.experiencia-card > h5 {
+  margin-bottom: 8px;
+  color: #f1f1f1;
+  font-size: 1rem;
+}
+
+/* Linha vertical e marcadores laranja dos cargos da Accionar */
+.cargos-lista {
+  margin: 8px 0 0 7px;
+  padding: 0 0 0 27px;
+  border-left: 1px solid #424242;
+  list-style: none;
+}
+
+.cargos-lista li {
+  position: relative;
+  padding: 0 0 27px;
+}
+
+.cargos-lista li:last-child { padding-bottom: 0; }
+
+.cargos-lista li::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -33px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid #131313;
+  background: var(--primaria);
+  box-shadow: 0 0 0 1px #74401f;
+}
+
+.cargo-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px 25px;
+  flex-wrap: wrap;
+  margin-bottom: 7px;
+}
+
+.cargo-cabecalho h5 { font-size: 1rem; }
+
+.cargo-cabecalho span {
+  color: #999;
+  font-size: .8rem;
+}
+
+/* Tablets: foto e texto em uma coluna; experiências mantêm largura confortável */
 @media (max-width: 900px) {
-
-  .sobre-layout {
-
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-
-  }
-
-  .sobre-foto-container {
-
-    max-width: 400px;
-
-    margin: 0 auto;
-
-  }
-
+  .sobre-layout { grid-template-columns: 1fr; gap: 40px; }
+  .sobre-foto-container { max-width: 380px; margin: 0 auto; }
+  .trajetoria { margin-top: 75px; }
 }
 
-/* Celulares */
-
+/* Celulares: experiências empilhadas para leitura acessível */
 @media (max-width: 600px) {
-
-  .sobre {
-
-    padding: 65px 6%;
-
-  }
-
-  .sobre-layout {
-
-    gap: 35px;
-
-  }
-
-  .sobre-foto-container {
-
-    max-width: 320px;
-
-  }
-
-  .sobre-conteudo .sobre-titulo {
-
-    font-size: clamp(2.3rem, 9vw, 3.5rem);
-
-  }
-
-  .sobre-conteudo .sobre-caixa {
-
-    padding: 22px;
-
-  }
-
-  .sobre-conteudo .sobre-paragrafo {
-
-    font-size: 0.9rem;
-
-  }
-
+  .sobre { padding: 60px 6% 80px; }
+  .sobre-foto-container { max-width: 310px; }
+  .sobre-conteudo .sobre-titulo { font-size: clamp(2.25rem, 9vw, 3.2rem); }
+  .sobre-conteudo .sobre-caixa { padding: 22px; }
+  .sobre-conteudo .sobre-paragrafo { font-size: .92rem; }
+  .trajetoria { margin-top: 65px; padding-top: 48px; }
+  .trajetoria-lista { grid-template-columns: 1fr; }
+  .experiencia-destaque { grid-column: auto; }
+  .experiencia-topo { flex-direction: column; gap: 6px; }
+  .experiencia-periodo { text-align: left; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-
-  .sobre-foto {
-
-    transition: none;
-
-  }
-
-}
-
-/* Segurança de layout: evita colunas estreitas em estruturas aninhadas. */
-.sobre>.sobre-layout {
-  min-width: 0;
-}
-
-.sobre-layout>* {
-  min-width: 0;
+  .sobre-foto, .experiencia-card { transition: none; }
 }
